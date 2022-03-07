@@ -1,0 +1,21 @@
+{%extends 'auth_app/base.html'%}
+
+{%block body_block %}
+<div class="jumbotron">
+
+
+<div class="container">
+  <h1>hey user!!!! you just need to create your own user account::</h1>
+  <h3>all fields are mendatory:</h3>
+
+  <form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="submit">
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
